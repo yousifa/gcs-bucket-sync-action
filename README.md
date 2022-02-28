@@ -16,6 +16,7 @@ _\*If you want to sync to an exiting bucket, make sure that your repository incl
 ## Inputs
 - `secrets` Your Google service account credentials as json. _**(Required)**_
 - `bucket` Name of the target bucket. _**(Required)**_
+- `subdirectory` Name of the subdirectory to deploy.
 - `exclude` Regex for excluding files/dirs. ([gsutil rsync doc](https://cloud.google.com/storage/docs/gsutil/commands/rsync))
 
 ## Example
@@ -40,6 +41,7 @@ jobs:
         with:
           secrets: ${{ secrets.google_service_account_credentials }}
           bucket: 'patrickwyler.com'
+          subdirectory: 'build'
           exclude: '.*\.md$|.gitignore$|.git\/.*$|.github\/.*$'
 ```
 
