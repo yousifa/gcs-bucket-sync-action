@@ -9,6 +9,9 @@ inputs:
   bucket:
     description: Bucket name
     required: true
+  subdirectory:
+    description: Subdirectory name
+    required: false
   exclude:
     description: Regex for excluding files/dirs
     required: false
